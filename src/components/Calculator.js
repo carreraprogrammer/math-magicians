@@ -20,9 +20,14 @@ class Calculator extends React.Component {
   }
 
   render() {
+    const { total, next, operation } = this.state;
     return (
       <section className="calculator-container">
-        <h3 className="result-screen">0</h3>
+        <h3 className="result-screen">
+          {total}
+          {operation}
+          {next}
+        </h3>
         <div className="calculator-keyboard">
           <button type="button" className="button">AC</button>
           <button type="button" className="button">+/-</button>
