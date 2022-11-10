@@ -1,5 +1,6 @@
 import React from 'react';
 import Calculator from './components/Calculator';
+import Navbar from './components/Navbar';
 
 class App extends React.Component {
   constructor(props) {
@@ -9,7 +10,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <Calculator />
+      <>
+        <Navbar />
+        <Calculator />
+      </>
     );
   }
 }

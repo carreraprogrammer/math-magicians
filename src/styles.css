@@ -48,7 +48,7 @@
   cursor: pointer;
 }
 
-.button:nth-child(17){
+.button:nth-child(17) {
   grid-column: 1/3;
 }
 
@@ -70,6 +70,14 @@
 .button:nth-child(16):hover,
 .button:nth-child(19):hover {
   background-color: rgba(255, 68, 0, 0.813);
+}
+
+.NavBar {
+  display: flex;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border: 1px solid black;
 }
 
 @media only screen and (min-width: 768px) {
