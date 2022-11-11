@@ -10,16 +10,17 @@
 
 #root {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/***** Here start the calculator style ********/
+
 .calculator-container {
-  display: none;
   width: 70%;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
 }
@@ -73,6 +74,8 @@
   background-color: rgba(255, 68, 0, 0.813);
 }
 
+/**** Here start the navBar styles ****/
+
 .navBar {
   display: flex;
   justify-content: space-between;
@@ -96,13 +99,45 @@
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-left: 24px;
   cursor: pointer;
+  font-weight: bold;
+}
+
+/*** Here start the Home styles ****/
+.home {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 20%;
+}
+
+.homeTitle {
+  font-size: 2rem;
+  margin: 24px;
+  margin-top: 25%;
+}
+
+.homePar {
+  font-size: 1rem;
+  margin: 24px;
+  text-align: justify;
 }
 
 @media only screen and (min-width: 768px) {
   .calculator-container {
     width: 20%;
+  }
+
+  .home {
+    width: 90%;
+    margin-top: 0%;
+  }
+
+  .homeTitle {
+    margin-top: 0%;
   }
 }
