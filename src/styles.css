@@ -10,17 +10,22 @@
 
 #root {
   width: 100vw;
+  min-height: 100vh;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /***** Here start the calculator style ********/
 
 .calculator-container {
-  width: 70%;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
@@ -108,7 +113,7 @@
 /*** Here start the Home styles ****/
 .home {
   width: 90%;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100vh;
@@ -151,6 +156,7 @@
   width: 100%;
   margin-top: 24px;
 }
+
 @media only screen and (min-width: 768px) {
   .calculator-container {
     width: 20%;
