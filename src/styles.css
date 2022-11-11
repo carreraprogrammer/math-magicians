@@ -108,7 +108,7 @@
 /*** Here start the Home styles ****/
 .home {
   width: 90%;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   height: 100vh;
@@ -127,6 +127,30 @@
   text-align: justify;
 }
 
+/**** Here start the styles for the quotes page ******/
+
+.quoteContainer {
+  height: 100vh;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote {
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.author {
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: right;
+  width: 100%;
+  margin-top: 24px;
+}
 @media only screen and (min-width: 768px) {
   .calculator-container {
     width: 20%;
