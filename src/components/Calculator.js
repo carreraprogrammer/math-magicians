@@ -17,17 +17,22 @@ const Calculator = () => {
   const { total, next, operation } = state;
 
   return (
-    <section className="calculator-container">
-      <div className="result-screen">
-        {total}
-        {operation}
-        {next}
+    <div className="calculatorPage">
+      <div className="calculatorTitle">
+        <h1> Let&#39;s do some math! </h1>
       </div>
-      <div className="calculator-keyboard">
-        {keyboard.map((key) => (
-          <button type="button" className="button" key={key} id={key} onClick={handleClick}>{key}</button>))}
+      <div className="calculatorContainer">
+        <div className="resultScreen">
+          {total}
+          {operation}
+          {next}
+        </div>
+        <div className="calculatorKeyboard">
+          {keyboard.map((key) => (
+            <button type="button" className="button" key={key} id={key} onClick={handleClick}>{key}</button>))}
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 

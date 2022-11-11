@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 *,
 *::before,
 *::after {
@@ -8,6 +10,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  --purple: #8963c6;
+  --Rich-lilac: #bb63c6;
+  --Toolbox: #636fc6;
+  --middle-green: #a0c663;
+  --soft-purple: #8963c651;
+  --soft-rich-lilac: #ba63c640;
+  --soft-toolbox: #636ec651;
+  --soft-middle-green: #a0c6645e;
+}
+
 #root {
   width: 100vw;
   min-height: 100vh;
@@ -15,43 +28,73 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Courier Prime', monospace;
 }
 
 a {
   text-decoration: none;
   color: black;
+  transition: all 0.5s ease-in-out;
+  font-family: 'Allerta Stencil', sans-serif;
+}
+
+a:hover {
+  font-size: 1.3rem;
+  color: var(--purple);
+}
+
+a:active {
+  font-size: 1.3rem;
+  color: var(--Rich-lilac);
 }
 
 /***** Here start the calculator style ********/
 
-.calculator-container {
+.calculatorPage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculatorTitle {
+  font-size: 1.2rem;
+  font-family: 'Allerta Stencil', sans-serif;
+}
+.calculatorContainer {
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin-top: 24px;
 }
 
-.result-screen {
+.resultScreen {
   width: 100%;
   border-bottom: 1px solid rgba(180, 179, 179, 0.459);
   display: flex;
   justify-content: flex-end;
   align-items: center;
   font-size: 1.5rem;
-  height: 40px;
-  background-color: rgb(97, 106, 118);
-  color: white;
+  height: 70px;
+  background-color: var(--soft-rich-lilac);
+  border: 2px solid var(--purple);
+  color: black;
   padding-right: 5px;
 }
 
-.calculator-keyboard {
+.calculatorKeyboard {
   display: grid;
+  height: 80%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 50px 50px 50px 50px 50px;
+  grid-template-rows: 70px 70px 70px 70px 70px;
 }
 
 .button {
-  background-color: rgba(180, 179, 179, 0.459);
-  border: 0.5px solid rgba(180, 179, 179, 0.459);
+  background-color: var(--soft-purple);
+  border: 0.5px solid var(--purple);
   cursor: pointer;
 }
 
@@ -60,7 +103,7 @@ a {
 }
 
 .button:hover {
-  background-color: rgba(128, 128, 128, 0.345);
+  background-color: var(--purple);
 }
 
 .button:nth-child(4),
@@ -68,7 +111,7 @@ a {
 .button:nth-child(12),
 .button:nth-child(16),
 .button:nth-child(19) {
-  background-color: rgb(255, 145, 0);
+  background-color: var(--middle-green);
 }
 
 .button:nth-child(4):hover,
@@ -76,7 +119,7 @@ a {
 .button:nth-child(12):hover,
 .button:nth-child(16):hover,
 .button:nth-child(19):hover {
-  background-color: rgba(255, 68, 0, 0.813);
+  background-color: var(--Toolbox);
 }
 
 /**** Here start the navBar styles ****/
@@ -88,8 +131,9 @@ a {
   position: absolute;
   top: 0;
   width: 100%;
-  border: 1px solid black;
-  height: 8%;
+  border: 2px solid var(--Toolbox);
+  background-color: #636ec62e;
+  height: 10%;
 }
 
 .nav {
@@ -101,13 +145,15 @@ a {
 
 .navLink {
   padding: 5px;
+  font-size: 1rem;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-left: 24px;
   cursor: pointer;
   font-weight: bold;
+  font-family: 'Allerta Stencil', sans-serif;
 }
 
 /*** Here start the Home styles ****/
@@ -116,20 +162,56 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 100vh;
-  margin-top: 20%;
+  margin-top: 50%;
+}
+
+.homeImage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .homeTitle {
   font-size: 2rem;
   margin: 24px;
   margin-top: 25%;
+  font-family: 'Allerta Stencil', sans-serif;
+}
+
+.figure {
+  max-width: 200px;
+  max-height: 200px;
+  margin: auto;
+  border: 2px solid var(--purple);
 }
 
 .homePar {
   font-size: 1rem;
   margin: 24px;
   text-align: justify;
+}
+
+.btnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.sourceBtn {
+  width: 150px;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border: 2px solid var(--purple);
+  background-color: var(--soft-purple);
+}
+
+.sourceBtn:hover {
+  transform: scale(1.1);
+  border: 2px solid var(--Rich-lilac);
+  background-color: var(--soft-rich-lilac);
 }
 
 /**** Here start the styles for the quotes page ******/
@@ -147,6 +229,11 @@ a {
   font-size: 2rem;
   width: 100%;
   text-align: center;
+  cursor: pointer;
+}
+
+.quote:hover {
+  color: var(--Toolbox);
 }
 
 .author {
@@ -157,17 +244,66 @@ a {
   margin-top: 24px;
 }
 
+.author:hover {
+  color: var(--purple);
+}
+
 @media only screen and (min-width: 768px) {
-  .calculator-container {
-    width: 20%;
+  .calculatorPage {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .calculatorContainer {
+    width: 25%;
+    margin-top: 0;
   }
 
   .home {
     width: 90%;
     margin-top: 0%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .homeImage {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8%;
+    height: 80%;
+  }
+
+  .figure {
+    flex-basis: 90%;
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    margin-top: 0;
+  }
+
+  .description {
+    flex-basis: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .homeTitle {
     margin-top: 0%;
+    flex-basis: 10%;
+    width: 100%;
+  }
+
+  .navLink {
+    padding: 15px;
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    font-size: 2rem;
   }
 }
