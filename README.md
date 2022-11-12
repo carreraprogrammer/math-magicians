@@ -20,7 +20,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://carreraprogrammer.github.io/math-magicians/)
+[Live Demo Link](https://math-magicians-cp.netlify.app/)
 
 
 ## Getting Started
